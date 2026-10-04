@@ -1,38 +1,32 @@
 import estoqueData from "../data/estoque.json" with { type: "json" };
+
 import type IEstoque from "../types/estoque.type.ts";
 
 let id = 1;
 
-export default function estoqueService({
-  codigoProduto,
-  tipo,
-  quantidade,
-  descricao,
-}: IEstoque) {
+export default function estoqueService(dados: IEstoque) {
   const produto = estoqueData.estoque.find(
-    (produto) => produto.codigoProduto === codigoProduto,
+    (produto) => produto.codigoProduto === dados.codigoProduto,
   );
 
   if (!produto) {
     throw new Error("Produto não encontrado");
   }
 
-  if (tipo === "entrada") {
-    produto.estoque += quantidade;
+  if (dados.tipo === "entrada") {
+    produto.estoque += dados.quantidade;
   }
 
-  if (tipo === "saída") {
-    produto.estoque -= quantidade;
+  if (dados.tipo === "saida") {
+    produto.estoque -= dados.quantidade;
   }
 
-  const movimentacao = {
+  return {
     id: id++,
     produto: produto.descricaoProduto,
-    tipo,
-    quantidade,
-    descricao,
+    tipo: dados.tipo,
+    quantidade: dados.quantidade,
+    descricao: dados.descricao,
     estoqueFinal: produto.estoque,
   };
-
-  return movimentacao;
 }
