@@ -1,4 +1,4 @@
-### 1. Considerando que o json abaixo tem registros de vendas de um time comercial, faça um programa que leia os dados e calcule a comissão de cada vendedor, seguindo a seguinte regra para cada venda:
+### 1. Considerando que o json abaixo tem registros de vendas de um time comercial, faça um programa que leia os dados e calcule a _comissão_ de cada vendedor, seguindo a seguinte regra para cada venda:
 
 - Vendas abaixo de R$100,00 não gera comissão
 - Vendas abaixo de R$500,00 gera 1% de comissão
