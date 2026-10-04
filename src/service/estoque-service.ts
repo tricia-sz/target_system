@@ -4,29 +4,34 @@ import type IEstoque from "../types/estoque.type.ts";
 
 let id = 1;
 
-export default function estoqueService(dados: IEstoque) {
+export default function estoqueService({
+  codigoProduto,
+  tipo,
+  quantidade,
+  descricao,
+}: IEstoque) {
   const produto = estoqueData.estoque.find(
-    (produto) => produto.codigoProduto === dados.codigoProduto,
+    (produto) => produto.codigoProduto === codigoProduto,
   );
 
   if (!produto) {
     throw new Error("Produto não encontrado");
   }
 
-  if (dados.tipo === "entrada") {
-    produto.estoque += dados.quantidade;
+  if (tipo === "entrada") {
+    produto.estoque += quantidade;
   }
 
-  if (dados.tipo === "saida") {
-    produto.estoque -= dados.quantidade;
+  if (tipo === "saida") {
+    produto.estoque -= quantidade;
   }
 
   return {
     id: id++,
     produto: produto.descricaoProduto,
-    tipo: dados.tipo,
-    quantidade: dados.quantidade,
-    descricao: dados.descricao,
+    tipo: tipo,
+    quantidade: quantidade,
+    descricao: descricao,
     estoqueFinal: produto.estoque,
   };
 }
