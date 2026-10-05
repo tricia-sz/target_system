@@ -21,11 +21,11 @@ export default function Comissao() {
   }, []);
 
   return (
-    <Container className="mt-8 mb-8 grid grid-cols-4 gap-12 space-y-4 p-8 shadow-2xl shadow-amber-600">
+    <Container className="mt-8 mb-8 grid grid-cols-4 gap-12 space-y-4 rounded-2xl p-8 shadow-2xl shadow-amber-600">
       {comissoes.map((comissao, index) => (
         <Container
           key={index}
-          className="items-center justify-center rounded-lg bg-orange-100 p-4 text-orange-800 shadow shadow-amber-600"
+          className="items-center justify-center rounded-lg bg-orange-50 p-4 text-orange-800 shadow shadow-amber-600"
         >
           <p>
             <b>Vendedor:</b> {comissao.vendedor}

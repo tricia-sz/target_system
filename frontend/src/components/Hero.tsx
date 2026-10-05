@@ -5,7 +5,7 @@ import { Container } from "./Contianer";
 export function Hero() {
   return (
     <Container className="">
-      <h1 className="text-7xl font-extrabold text-nowrap text-orange-900">
+      <h1 className="text-7xl font-extrabold text-nowrap text-orange-950">
         Gestão simples.
       </h1>
       <span className="text-6xl font-extrabold text-nowrap text-orange-600">
@@ -21,7 +21,7 @@ export function Hero() {
         <Button className="flex w-64 items-center justify-center gap-2 rounded-full bg-orange-600 py-4 text-xl text-white shadow-2xl shadow-amber-600">
           Começar agora <GrLinkNext />
         </Button>
-        <Button className="w-60 rounded-full border border-orange-500 bg-orange-100 py-4 text-xl text-orange-950">
+        <Button className="w-60 rounded-full bg-orange-100 py-4 text-xl text-orange-950 shadow shadow-amber-600">
           Conhecer Recursos{" "}
         </Button>
       </div>

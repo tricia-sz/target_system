@@ -1,3 +1,6 @@
+import { Link } from "react-router";
+import SocialMedia from "./SocialMedia";
+
 export default function Footer() {
   const cidades = [
     ["Comercial", "(11) 94543.1551"],
@@ -12,13 +15,16 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full border-t-8 border-t-orange-600 bg-orange-200 py-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-6">
-        <img src="/logo.svg" alt="Target" width={150} className="mb-8" />
+    <footer className="w-full border-t-8 border-t-orange-600 bg-orange-200 py-10">
+      <div className="mx-auto mb-8">
+        <SocialMedia />
+      </div>
+      <div className="mx-auto flex max-w-7xl flex-col items-center">
+        <img src="/logo.svg" alt="Target" width={250} className="" />
 
-        <ul className="grid w-full grid-cols-2 gap-6 text-center text-orange-900 sm:grid-cols-3 lg:grid-cols-9">
+        <ul className="grid w-full grid-cols-2 text-center text-sm text-orange-900 sm:grid-cols-3 lg:grid-cols-9">
           {cidades.map(([cidade, telefone]) => (
-            <li key={cidade} className="flex flex-col items-center">
+            <li key={cidade} className="mb-4 flex flex-col items-center py-4">
               <strong>{cidade}</strong>
 
               <span className="whitespace-nowrap">{telefone}</span>
@@ -26,18 +32,18 @@ export default function Footer() {
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-2 text-orange-700 md:flex-row">
+        <div className="flex flex-col items-center justify-center gap-2 text-xl text-orange-700 md:flex-row">
           <span>
             Developed by{" "}
-            <a
-              href="https://tricia-sz.netlify.app"
+            <Link
+              to="https://tricia-sz.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-orange-600 hover:underline"
+              className="font-medium text-orange-800 hover:underline"
             >
               Patrícia Souza
-            </a>{" "}
-            ❤️ 2026
+            </Link>{" "}
+            🤎 2026
           </span>
         </div>
       </div>
