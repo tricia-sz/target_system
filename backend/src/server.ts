@@ -1,8 +1,10 @@
 import express, { type Request, type Response } from "express";
-
+import cors from "cors";
 import routes from "./routes/routes.ts";
 
 const server = express();
+
+server.use(cors());
 
 server.use(express.json());
 

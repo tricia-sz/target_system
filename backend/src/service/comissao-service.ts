@@ -1,6 +1,6 @@
 import vendasData from "../data/vendas.json" with { type: "json" };
 
-export default function comissaoService() {
+export default async function comissaoService() {
   return vendasData.vendas.map((venda) => {
     let comissao = 0;
 
