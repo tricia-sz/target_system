@@ -1,6 +1,6 @@
 import type IJuros from "../types/juros.type.ts";
 
-export default function jurosService({ dataVencimento, valor }: IJuros) {
+export default async function jurosService({ dataVencimento, valor }: IJuros) {
   const vencimento = new Date(dataVencimento);
 
   const hoje = new Date();
