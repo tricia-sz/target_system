@@ -5,23 +5,36 @@ import { Link } from "react-router";
 
 export default function Header() {
   return (
-    <header className="flex w-full justify-center border-b-8 border-b-orange-700 bg-orange-200 py-4">
-      <div className="flex w-96 items-center justify-between">
-        <img src="./public/logo.svg" alt="Target" className="" width={150} />
-      </div>
-      <div className="justify-betwee flex items-center gap-12 text-red-900">
-        <div className="flex w-28 items-center justify-center gap-0.5 rounded-2xl bg-orange-300 py-1 text-center">
-          <IoIosHome size={26} />
-          <Link to="/">Home</Link>
+    <header className="w-full border-b-8 border-b-orange-600 bg-orange-200">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-8 py-6 lg:flex-row">
+        <div>
+          <img
+            src="/logo.svg"
+            alt="Target"
+            width={250}
+            className="w-48 lg:w-[250px]"
+          />
         </div>
-        <div className="flex w-32 items-center justify-center gap-1 rounded-2xl bg-orange-300 py-1 text-center">
-          <FaMoneyCheckAlt size={26} />
-          <Link to="/comissao">Comissao</Link>
-        </div>
-        <div className="flex w-32 items-center justify-center gap-0.5 rounded-2xl bg-orange-300 py-1 text-center">
-          <BsFillClipboard2CheckFill size={26} />
-          <Link to="/estoque">Estoque</Link>
-        </div>
+
+        <nav className="flex items-center gap-4 text-red-800 lg:gap-12">
+          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-300 py-2 shadow shadow-amber-600 lg:w-36">
+            <IoIosHome size={26} />
+
+            <Link to="/">Home</Link>
+          </div>
+
+          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-300 py-2 shadow shadow-amber-600 lg:w-36">
+            <FaMoneyCheckAlt size={26} />
+
+            <Link to="/comissao">Comissão</Link>
+          </div>
+
+          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-300 py-2 shadow shadow-amber-600 lg:w-36">
+            <BsFillClipboard2CheckFill size={26} />
+
+            <Link to="/estoque">Estoque</Link>
+          </div>
+        </nav>
       </div>
     </header>
   );

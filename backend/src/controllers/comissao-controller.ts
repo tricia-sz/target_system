@@ -1,10 +1,11 @@
 import type { Request, Response } from "express";
+
 import comissaoService from "../service/comissao-service.ts";
 
-const comissaoController = (request: Request, response: Response) => {
-  const resultado = comissaoService();
+const comissaoController = async (request: Request, response: Response) => {
+  const resultado = await comissaoService();
 
-  return response.json(resultado);
+  return response.status(200).json(resultado);
 };
 
 export default comissaoController;

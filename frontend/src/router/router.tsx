@@ -5,16 +5,19 @@ import Estoque from "../pages/Estoque";
 import { Home } from "../pages/Home";
 import { createBrowserRouter, Outlet } from "react-router";
 
-const Layout = () => {
+export default function Layout() {
   return (
-    <div className="flex flex-col">
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <Outlet />
+
+      <main className="flex-1">
+        <Outlet />
+      </main>
+
       <Footer />
     </div>
   );
-};
-
+}
 export const router = createBrowserRouter([
   {
     element: <Layout />,
