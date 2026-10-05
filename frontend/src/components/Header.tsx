@@ -11,25 +11,25 @@ export default function Header() {
           <img
             src="/logo.svg"
             alt="Target"
-            width={250}
+            width={90}
             className="w-48 lg:w-[250px]"
           />
         </div>
 
-        <nav className="flex items-center gap-4 text-red-800 lg:gap-12">
-          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-300 py-2 shadow shadow-amber-600 lg:w-36">
+        <nav className="flex items-center gap-4 text-orange-950 lg:gap-12">
+          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-100 py-2 shadow shadow-amber-600 lg:w-36">
             <IoIosHome size={26} />
 
             <Link to="/">Home</Link>
           </div>
 
-          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-300 py-2 shadow shadow-amber-600 lg:w-36">
+          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-100 py-2 shadow shadow-amber-600 lg:w-36">
             <FaMoneyCheckAlt size={26} />
 
             <Link to="/comissao">Comissão</Link>
           </div>
 
-          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-300 py-2 shadow shadow-amber-600 lg:w-36">
+          <div className="flex w-32 items-center justify-center gap-1 rounded-full bg-orange-100 py-2 shadow shadow-amber-600 lg:w-36">
             <BsFillClipboard2CheckFill size={26} />
 
             <Link to="/estoque">Estoque</Link>

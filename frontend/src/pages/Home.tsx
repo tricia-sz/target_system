@@ -2,7 +2,7 @@ import { Hero } from "../components/Hero";
 
 export function Home() {
   return (
-    <section className="w-full bg-orange-50">
+    <section className="w-full">
       <div className="mx-auto flex max-w-7xl items-center gap-10 px-8 py-12">
         <Hero />
 

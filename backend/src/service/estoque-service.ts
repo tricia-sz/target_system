@@ -4,7 +4,7 @@ import type IEstoque from "../types/estoque.type.ts";
 
 let id = 1;
 
-export default async function estoqueService({
+export async function estoqueService({
   codigoProduto,
   tipo,
   quantidade,
@@ -29,9 +29,13 @@ export default async function estoqueService({
   return {
     id: id++,
     produto: produto.descricaoProduto,
-    tipo: tipo,
-    quantidade: quantidade,
-    descricao: descricao,
+    tipo,
+    quantidade,
+    descricao,
     estoqueFinal: produto.estoque,
   };
+}
+
+export function listarEstoque() {
+  return estoqueData.estoque;
 }
