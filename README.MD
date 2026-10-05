@@ -1,6 +1,18 @@
+# Home
+
 ![appfront](./frontend/public/app.png)
-![comissao](./frontend/public/comissao.png)
+
+# Comissão
+
+![header](./frontend/public/header.png)
+![comiisoes](./frontend/public/comissoes.png)
+![footer](./frontend/public/footer.png)
+
+# Estoque
+
+![header](./frontend/public/header.png)
 ![estoque](./frontend/public/estoque.png)
+![footer](./frontend/public/footer.png)
 
 ### 1. Considerando que o json abaixo tem registros de vendas de um time comercial, faça um programa que leia os dados e calcule a _comissão_ de cada vendedor, seguindo a seguinte regra para cada venda:
 
